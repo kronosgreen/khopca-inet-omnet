@@ -26,6 +26,7 @@ simple KHOPCARouting
         string routingTableModule = default("^.routingTable");
         string interfaceTableModule = default("^.interfaceTable");
         string networkProtocolModule = default("^.networkLayer.ip");
+        string statsModule = default("^.^.stats");
 		string energyStorage = default("^.energyStorage");
 		string destAddress = default("");
         int udpPort = default(654);

@@ -6,6 +6,7 @@
  */
 
 #include "inet/routing/khopca/KHOPCARouting.h"
+#include "inet/common/statstracker/StatsTracker.h"
 #include "inet/networklayer/ipv4/ICMPMessage.h"
 #include "inet/networklayer/ipv4/IPv4Route.h"
 
@@ -83,6 +84,7 @@ void KHOPCARouting::initialize(int stage){
         routingTable = getModuleFromPar<IRoutingTable>(par("routingTableModule"), this);
         interfaceTable = getModuleFromPar<IInterfaceTable>(par("interfaceTableModule"), this);
         networkProtocol = getModuleFromPar<INetfilter>(par("networkProtocolModule"), this);
+        stats = getModuleFromPar<StatsTracker>(par("statsModule"), this);
 
         MAX = par("MAX");
         MIN = par("MIN");
@@ -91,16 +93,6 @@ void KHOPCARouting::initialize(int stage){
         updateInterval += (uniform(1,100)/50);
         //destAddress = par("destAddress");
         power = uniform(1,100)/100;
-
-        // Naming Output Vectors for Statistics Collectio*n
-        clusterSize.setName("Cluster Size");
-        roleChange.setName("Role Changes");
-        clusterDuration.setName("Cluster Duration");
-        ratioClusterheads.setName("Ratio of Clusterheads to Non-Clusterheads");
-        numMsgExchanged.setName("Number of Messages Exchanged");
-        RoCinClusterheads.setName("Rate of Change in # of Clusterheads");
-        nodeDelay.setName("Delay");
-        ratioUnconnectedNodes.setName("Ratio of Unconnected Nodes");
 
         khopcaUDPPort = par("udpPort");
         selfMsg = new cMessage("sendTimer");
@@ -114,66 +106,12 @@ void KHOPCARouting::initialize(int stage){
         address = this->getSelfIPAddress();
         IPSocket socket(gate("ipOut"));
         socket.registerProtocol(IP_PROT_MANET);
-        networkProtocol->registerHook(0, this);
         host->subscribe(NF_LINK_BREAK, this);
 
         scheduleAt(simTime() + updateInterval, selfMsg);
     }
 }
 
-//
-// Printing to a text file from : https://groups.google.com/forum/#!topic/omnetpp/ZgcG96lYcdo
-//
-void KHOPCARouting::printKHOPCAInfo(char* filename, float calcTime)
-{
-    std::ofstream  out;
-    out.open(filename, std::ios_base::app);
-
-    if(connected[0].size() > 0){
-        out << endl << "CLUSTER HEAD : " << address << "    SIM TIME : " << simTime() << endl << "----------------------------------" << endl;
-        std::vector<std::vector<std::string>>::iterator connIt;
-        std::vector<std::string>::iterator nodeIt;
-        int weightInd = MAX - 1;
-        for(connIt = connected.begin(); connIt != connected.end(); connIt++){
-            out << endl << "LEVEL : " << weightInd << endl << "---------------------------------" << endl;
-            for(nodeIt = (*connIt).begin(); nodeIt != (*connIt).end(); nodeIt++){
-                out << (*nodeIt).c_str() << endl;
-            }
-            weightInd--;
-        }
-        out << endl << "TIME TO COMPUTE : " << calcTime << endl;
-    }
-
-
-
-    out.close();
-}
-
-//
-// When a cluster head drops in weight, prints the duration of its cluster
-//
-void KHOPCARouting::printClusterDuration(char* filename, simtime_t dur){
-
-    std::ofstream  out;
-    out.open(filename, std::ios_base::app);
-
-    out << dur << endl;
-
-    out.close();
-}
-
-//
-// Print the number of times the role or weight changed during the simulation
-//
-void KHOPCARouting::printRoleChanges(char* filename, int roleChanges){
-
-    std::ofstream  out;
-    out.open(filename, std::ios_base::app);
-
-    out << roleChanges << endl;
-
-    out.close();
-}
 
 //
 // Calculates the max weight in the neighborhood of nodes
@@ -357,16 +295,14 @@ void KHOPCARouting:: ImplementRules(){
     // Record role changes
     if (old_w_n != w_n)
     {
-        roleChange.record(w_n);
-        roleChangeStats.collect(w_n);
+        stats -> recordRoleChange(w_n);
     }
 
     // Check if node has become clusterhead or has lost clusterhead position
     if (old_w_n != MAX && w_n == MAX){
-        headDur = simTime();
+        headDur = simTime().dbl();
     } else if (old_w_n == MAX && w_n != MAX) {
-        clusterDuration.record(simTime() - headDur);
-        clusterDurationStats.collect(simTime() - headDur);
+        stats -> recordDurationHead(simTime().dbl() - headDur);
         headDur = 0;
     }
 
@@ -384,7 +320,7 @@ void KHOPCARouting:: ImplementRules(){
 
     if(w_n == MAX){
         clock_t timeToCalc = clock() - startTime;
-        printKHOPCAInfo("output.txt", ((float)timeToCalc)/CLOCKS_PER_SEC);
+        //printKHOPCAInfo("output.txt", ((float)timeToCalc)/CLOCKS_PER_SEC);
     }
 
 }
@@ -464,7 +400,6 @@ std::vector<std::vector<std::string>> KHOPCARouting::ParseTree(std::string info)
                 }
                 wtIndex--;
             }
-
     }
 
     return tree;
@@ -527,164 +462,21 @@ L3Address KHOPCARouting:: getSelfIPAddress() const{
     return routingTable->getRouterIdAsGeneric();
 }
 
-/*IRoute *KHOPCARouting::createRoute(const L3Address& destAddr, const L3Address& nextHop, unsigned int hopCount, bool hasValidDestNum, unsigned int destSeqNum, bool isActive, simtime_t lifeTime)
-{
-    IRoute *newRoute = routingTable->createRoute();
-    KHOPCARouteData *newProtocolData = new KHOPCARouteData();
-
-    newProtocolData->setHasValidDestNum(hasValidDestNum);
-
-    // active route
-    newProtocolData->setIsActive(isActive);
-
-    // A route towards a destination that has a routing table entry
-    // that is marked as valid.  Only active routes can be used to
-    // forward data packets.
-
-    newProtocolData->setLifeTime(lifeTime);
-    newProtocolData->setDestSeqNum(destSeqNum);
-
-    InterfaceEntry *ifEntry = interfaceTable->getInterfaceByName("wlan0");    // TODO: IMPLEMENT: multiple interfaces
-    if (ifEntry)
-        newRoute->setInterface(ifEntry);
-
-    newRoute->setDestination(destAddr);
-    //newRoute->setSourceType(IRoute::KHOPCA);
-    newRoute->setSource(this);
-    newRoute->setProtocolData(newProtocolData);
-    newRoute->setMetric(hopCount);
-    newRoute->setNextHop(nextHop);
-    newRoute->setPrefixLength(addressType->getMaxPrefixLength());    // TODO:
-
-    EV_DETAIL << "Adding new route " << newRoute << endl;
-    routingTable->addRoute(newRoute);
-    //scheduleExpungeRoutes();
-    return newRoute;
-}*/
-
-INetfilter::IHook::Result KHOPCARouting::datagramForwardHook(INetworkDatagram *datagram, const InterfaceEntry *inputInterfaceEntry, const InterfaceEntry *& outputInterfaceEntry, L3Address& nextHopAddress)
-{
-    // TODO: Implement: Actions After Reboot
-    // If the node receives a data packet for some other destination, it SHOULD
-    // broadcast a RERR as described in subsection 6.11 and MUST reset the waiting
-    // timer to expire after current time plus DELETE_PERIOD.
-
-    Enter_Method("datagramForwardHook");
-    const L3Address& destAddr = datagram->getDestinationAddress();
-    const L3Address& sourceAddr = datagram->getSourceAddress();
-    IRoute *ipSource = routingTable->findBestMatchingRoute(sourceAddr);
-
-    if (destAddr.isBroadcast() || routingTable->isLocalAddress(destAddr) || destAddr.isMulticast()) {
-        //if (routingTable->isLocalAddress(destAddr) && ipSource && ipSource->getSource() == this)
-            //updateValidRouteLifeTime(ipSource->getNextHopAsGeneric(), simTime() + activeRouteTimeout);
-
-        return ACCEPT;
-    }
-
-    // TODO: IMPLEMENT: check if the datagram is a data packet or we take control packets as data packets
-
-    IRoute *routeDest = routingTable->findBestMatchingRoute(destAddr);
-    KHOPCARouteData *routeDestData = routeDest ? dynamic_cast<KHOPCARouteData *>(routeDest->getProtocolData()) : nullptr;
-
-    // Each time a route is used to forward a data packet, its Active Route
-    // Lifetime field of the source, destination and the next hop on the
-    // path to the destination is updated to be no less than the current
-    // time plus ACTIVE_ROUTE_TIMEOUT
-
-    //updateValidRouteLifeTime(sourceAddr, simTime() + activeRouteTimeout);
-    //updateValidRouteLifeTime(destAddr, simTime() + activeRouteTimeout);
-
-    //if (routeDest && routeDest->getSource() == this)
-    //    updateValidRouteLifeTime(routeDest->getNextHopAsGeneric(), simTime() + activeRouteTimeout);
-
-    // Since the route between each originator and destination pair is expected
-    // to be symmetric, the Active Route Lifetime for the previous hop, along the
-    // reverse path back to the IP source, is also updated to be no less than the
-    // current time plus ACTIVE_ROUTE_TIMEOUT.
-
-    //if (ipSource && ipSource->getSource() == this)
-    //    updateValidRouteLifeTime(ipSource->getNextHopAsGeneric(), simTime() + activeRouteTimeout);
-
-    EV_INFO << "We can't forward datagram because we have no active route for " << destAddr << endl;
-    //if (routeDest && routeDestData && !routeDestData->isActive()) {    // exists but is not active
-        // A node initiates processing for a RERR message in three situations:
-        // (ii)      if it gets a data packet destined to a node for which it
-        //           does not have an active route and is not repairing (if
-        //           using local repair)
-
-        // TODO: check if it is not repairing (if using local repair)
-
-        // 1. The destination sequence number of this routing entry, if it
-        // exists and is valid, is incremented for cases (i) and (ii) above,
-        // and copied from the incoming RERR in case (iii) above.
-
-    //    if (routeDestData->hasValidDestNum())
-    //        routeDestData->setDestSeqNum(routeDestData->getDestSeqNum() + 1);
-
-        // 2. The entry is invalidated by marking the route entry as invalid <- it is invalid
-
-        // 3. The Lifetime field is updated to current time plus DELETE_PERIOD.
-        //    Before this time, the entry SHOULD NOT be deleted.
-    //    routeDestData->setLifeTime(simTime() + deletePeriod);
-
-    //    sendRERRWhenNoRouteToForward(destAddr);
-    //}
-    //else if (!routeDest || routeDest->getSource() != this) // doesn't exist at all
-    //    sendRERRWhenNoRouteToForward(destAddr);
-
-    return ACCEPT;
+// returns True if node is cluster head or independent
+bool KHOPCARouting::isCluster() {
+    return w_n == 5 || neighbors.size() == 0;
 }
 
+bool KHOPCARouting::isClusterHead() {
+    return w_n == 5;
+}
 
-void KHOPCARouting::receiveSignal(cComponent *source, simsignal_t signalID, cObject *obj, cObject *details)
-{
-    Enter_Method("receiveChangeNotification");
-    if (signalID == NF_LINK_BREAK) {
-        EV_DETAIL << "Received link break signal" << endl;
-        // XXX: This is a hack for supporting both IdealMac and Ieee80211Mac. etc
-        cPacket *frame = check_and_cast<cPacket *>(obj);
-        INetworkDatagram *datagram = nullptr;
-        if (false
-#ifdef WITH_IEEE80211
-            || dynamic_cast<ieee80211::Ieee80211Frame *>(frame)
-#endif // ifdef WITH_IEEE80211
-#ifdef WITH_IDEALWIRELESS
-            || dynamic_cast<IdealMacFrame *>(frame)
-#endif // ifdef WITH_IDEALWIRELESS
-#ifdef WITH_CSMA
-            || dynamic_cast<CSMAFrame *>(frame)
-#endif // ifdef WITH_CSMA
-#ifdef WITH_CSMACA
-            || dynamic_cast<CsmaCaMacFrame *>(frame)
-#endif // ifdef WITH_CSMACA
-#ifdef WITH_LMAC
-            || dynamic_cast<LMacFrame *>(frame)
-#endif // ifdef WITH_LMAC
-#ifdef WITH_BMAC
-            || dynamic_cast<BMacFrame *>(frame)
-#endif // ifdef WITH_BMAC
-            )
-            datagram = dynamic_cast<INetworkDatagram *>(frame->getEncapsulatedPacket());
-        else
-            throw cRuntimeError("Unknown packet type in NF_LINK_BREAK signal");
-        if (datagram) {
-            L3Address unreachableAddr = datagram->getDestinationAddress();
-            if (unreachableAddr.getAddressType() == addressType) {
-                // A node initiates processing for a RERR message in three situations:
-                //
-                //   (i)     if it detects a link break for the next hop of an active
-                //           route in its routing table while transmitting data (and
-                //           route repair, if attempted, was unsuccessful), or
+bool KHOPCARouting::isUnconnectedNode() {
+    return w_n == 1 && neighbors.size() == 0;
+}
 
-                // TODO: Implement: local repair
-
-                IRoute *route = routingTable->findBestMatchingRoute(unreachableAddr);
-
-               // if (route && route->getSource() == this)
-               //   handleLinkBreakSendRERR(route->getNextHopAsGeneric());
-            }
-        }
-    }
+int KHOPCARouting::getClusterSize(){
+    return connected.size();
 }
 
 void KHOPCARouting::clearState(){
@@ -697,8 +489,7 @@ void KHOPCARouting::finish() {
 
     // Print out duration as cluster head at close
     if(w_n == MAX){
-        clusterDuration.record(simTime() - headDur);
-        clusterDurationStats.collect(simTime() - headDur);
+        stats -> recordDurationHead(simTime().dbl() - headDur);
     }
 
     EV << "Stats Recorded" << endl;

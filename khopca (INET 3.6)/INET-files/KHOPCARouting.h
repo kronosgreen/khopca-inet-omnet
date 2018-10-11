@@ -22,9 +22,12 @@
 #include "inet/routing/khopca/KHOPCAControlPackets_m.h"
 #include <map>
 
+
 namespace inet {
 
-    class KHOPCARouting : public cSimpleModule, public cListener, public INetfilter::IHook {
+    class StatsTracker;
+
+    class KHOPCARouting : public cSimpleModule, public cListener {// , public INetfilter::IHook
 
         protected:
 
@@ -38,28 +41,12 @@ namespace inet {
             IInterfaceTable *interfaceTable = nullptr;
             INetfilter *networkProtocol = nullptr;
 
+
             int khopcaUDPPort = 0;
 
-
-            // Stat Collecting
-            simtime_t headDur;
-            cOutVector roleChange;
-            cOutVector clusterDuration;
-            cOutVector clusterSize;
-            cOutVector ratioClusterheads;
-            cOutVector numMsgExchanged;
-            cOutVector RoCinClusterheads;
-            cOutVector nodeDelay;
-            cOutVector ratioUnconnectedNodes;
-
-            cStdDev roleChangeStats;
-            cStdDev clusterDurationStats;
-            cStdDev clusterSizeStats;
-            cStdDev ratioClusterheadsStats;
-            cStdDev numMsgStats;
-            cStdDev RoCinClusterheadsStats;
-            cStdDev delayStats;
-            cStdDev ratioUnconnectedStats;
+            double headDur;
+            StatsTracker *stats = nullptr;
+            int clusterSize;
 
             struct nodeProperties {
                 L3Address addr;
@@ -76,6 +63,7 @@ namespace inet {
 
             cMessage *selfMsg = nullptr;
 
+            //KHOPCA Parameters
             int MAX;
             int MIN;
             int w_n;
@@ -86,7 +74,6 @@ namespace inet {
             //Creates and sends weight/address info
             KHOPCAWeight *CreateKHOPCAWeight(const L3Address& destAddr);
             void SendKHOPCAWeight(KHOPCAWeight* packet, const L3Address& destAddr);
-            //void BroadcastKHOPCAWeight(KHOPCAWeight* packet);
             IRoute *createRoute(const L3Address& destAddr, const L3Address& nextHop, unsigned int hopCount, bool hasValidDestNum, unsigned int destSeqNum, bool isActive, simtime_t lifeTime);
 
             //Initialization, message/error handlers
@@ -94,7 +81,6 @@ namespace inet {
             virtual int numInitStages() const override { return NUM_INIT_STAGES; }
             L3Address getSelfIPAddress() const;
             void handleMessage(cMessage *msg) override;
-            virtual void receiveSignal(cComponent *source, simsignal_t signalID, cObject *obj, cObject *details) override;
 
             //KHOPCA W(N(n))
             int MaxNeighborWeight();
@@ -113,19 +99,6 @@ namespace inet {
             std::vector<std::vector<std::string>> ParseTree(std::string info);
             std::string CreateTreeString();
 
-            //Print info
-            void printKHOPCAInfo(char* filename, float calcTime);
-            void printClusterDuration(char* filename, simtime_t dur);
-            void printRoleChanges(char* filename, int roleChanges);
-
-            // Netfilter hooks
-            Result ensureRouteForDatagram(INetworkDatagram *datagram){ return ACCEPT; };
-            virtual Result datagramPreRoutingHook(INetworkDatagram *datagram, const InterfaceEntry *inputInterfaceEntry, const InterfaceEntry *& outputInterfaceEntry, L3Address& nextHopAddress) override { Enter_Method("datagramPreRoutingHook"); return ensureRouteForDatagram(datagram); }
-            virtual Result datagramForwardHook(INetworkDatagram *datagram, const InterfaceEntry *inputInterfaceEntry, const InterfaceEntry *& outputInterfaceEntry, L3Address& nextHopAddress) override;
-            virtual Result datagramPostRoutingHook(INetworkDatagram *datagram, const InterfaceEntry *inputInterfaceEntry, const InterfaceEntry *& outputInterfaceEntry, L3Address& nextHopAddress) override { return ACCEPT; }
-            virtual Result datagramLocalInHook(INetworkDatagram *datagram, const InterfaceEntry *inputInterfaceEntry) override { return ACCEPT; }
-            virtual Result datagramLocalOutHook(INetworkDatagram *datagram, const InterfaceEntry *& outputInterfaceEntry, L3Address& nextHopAddress) override { Enter_Method("datagramLocalOutHook"); return ensureRouteForDatagram(datagram); }
-            //void delayDatagram(INetworkDatagram *datagram);
 
             // End functions
             void clearState();
@@ -135,6 +108,12 @@ namespace inet {
             KHOPCARouting();
             virtual ~KHOPCARouting();
             int getWeight();
+
+            // For Statistics Collection
+            bool isCluster();
+            bool isClusterHead();
+            bool isUnconnectedNode();
+            int getClusterSize();
 
     };
 
