@@ -2,7 +2,7 @@
 # OMNeT++/OMNEST Makefile for khopca-test
 #
 # This file was generated with the command:
-#  opp_makemake --nolink -f --deep -O out -KINET_PROJ=/home/veins/src/inet -DINET_IMPORT -I. -I$$\(INET_PROJ\)/src -L$$\(INET_PROJ\)/src -lINET$$\(D\) -d src -X.
+#  opp_makemake --nolink -f --deep -O out -KINET_PROJ=/home/veins/src/inet -DINET_IMPORT -I. -I$$\(INET_PROJ\)/src -L$$\(INET_PROJ\)/src -lINET$$\(D\) -d simulations -X.
 #
 
 # Output directory
@@ -59,25 +59,25 @@ endif
 all:  submakedirs Makefile $(CONFIGFILE)
 	@# Do nothing
 
-submakedirs:  src_dir
+submakedirs:  simulations_dir
 
-.PHONY: all clean cleanall depend msgheaders smheaders  src
-src: src_dir
+.PHONY: all clean cleanall depend msgheaders smheaders  simulations
+simulations: simulations_dir
 
-src_dir:
-	cd src && $(MAKE) all
+simulations_dir:
+	cd simulations && $(MAKE) all
 
 msgheaders:
-	$(Q)cd src && $(MAKE) msgheaders
+	$(Q)cd simulations && $(MAKE) msgheaders
 
 smheaders:
-	$(Q)cd src && $(MAKE) smheaders
+	$(Q)cd simulations && $(MAKE) smheaders
 
 clean:
 	$(qecho) Cleaning $(TARGET)
 	$(Q)-rm -rf $O
 	$(Q)-rm -f $(call opp_rwildcard, . , *_m.cc *_m.h *_sm.cc *_sm.h)
-	-$(Q)cd src && $(MAKE) clean
+	-$(Q)cd simulations && $(MAKE) clean
 
 cleanall:
 	$(Q)$(MAKE) -s clean MODE=release

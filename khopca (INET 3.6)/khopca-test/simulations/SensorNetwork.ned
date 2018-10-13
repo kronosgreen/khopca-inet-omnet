@@ -22,36 +22,38 @@ import inet.physicallayer.contract.packetlevel.IRadioMedium;
 import inet.visualizer.integrated.IntegratedCanvasVisualizer;
 import inet.environment.common.PhysicalEnvironment;
 import inet.common.lifecycle.LifecycleController;
+import inet.common.statstracker.StatsTracker;
 
 network SensorNetwork
 {
     parameters:
         @isNetwork;
-        @display("bgb=2000,2000;bgi=100,1,gray");
+        @display("bgb=600,600;bgi=100,1,gray");
         int numHosts = default(0);
         string hostType = default("KHOPCARouter");
         string mediumType = default("IdealRadioMedium");
         @figure[title](type=label; pos=0,-1; anchor=sw; color=darkblue);
-        //@statistic[rcvdPk](source=hostB_rcvdPk; record=figure(count); targetFigure=rcvdPkText);
-        //@signal[hostB_rcvdPk];
-        //@delegatesignal[rcvdPk](source=hostB.udpApp[0].rcvdPk; target=hostB_rcvdPk);
         
     submodules:
+        
+        stats: StatsTracker {
+            @display("p=500,100");
+        }
 
         visualizer: IntegratedCanvasVisualizer {
-            @display("p=2000,200");
+            @display("p=500,150");
         }
         configurator: IPv4NetworkConfigurator {
-            @display("p=2000,300");
+            @display("p=500,200");
         }
         radioMedium: <mediumType> like IRadioMedium {
-            @display("p=2000,400");
+            @display("p=500,250");
         }
         figureHelper: DelegateSignalConfigurator {
-            @display("p=2000,500");
+            @display("p=500,300");
         }
         lifecycleController: LifecycleController {
-            @display("p=2000,600");
+            @display("p=500,350");
         }
 
         host[numHosts]: <hostType> like INetworkNode {
