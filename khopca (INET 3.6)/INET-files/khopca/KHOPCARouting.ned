@@ -35,6 +35,7 @@ simple KHOPCARouting
 		int MIN = default(1);
 		int w_n = default(MIN);
 		double updateInterval = default(3);
+		double packetLossProbability = default(0.001);
 		
     gates:
         input ipIn;

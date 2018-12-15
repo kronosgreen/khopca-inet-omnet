@@ -1,0 +1,136 @@
+** Event #0   t=0   Elapsed: 7e-06s (0m 00s)  0% completed  (40% total)
+     Speed:     ev/sec=0   simsec/sec=0   ev/simsec=0
+     Messages:  created: 902   present: 902   in FES: 601
+** Event #715264   t=33.035259214813   Elapsed: 2.00074s (0m 02s)  11% completed  (42% total)
+     Speed:     ev/sec=357502   simsec/sec=16.5116   ev/simsec=21651.6
+     Messages:  created: 1014209   present: 812   in FES: 385
+** Event #1472000   t=71.269785196997   Elapsed: 4.00079s (0m 04s)  23% completed  (44% total)
+     Speed:     ev/sec=378358   simsec/sec=19.1167   ev/simsec=19792
+     Messages:  created: 2093231   present: 634   in FES: 274
+** Event #2248192   t=116.899064169893   Elapsed: 6.00091s (0m 06s)  38% completed  (47% total)
+     Speed:     ev/sec=388073   simsec/sec=22.8133   ev/simsec=17010.8
+     Messages:  created: 3208682   present: 816   in FES: 319
+** Event #3002624   t=170.05835504058   Elapsed: 8.00097s (0m 08s)  56% completed  (51% total)
+     Speed:     ev/sec=377206   simsec/sec=26.5789   ev/simsec=14191.9
+     Messages:  created: 4299806   present: 607   in FES: 229
+** Event #3693568   t=230.044768257072   Elapsed: 10.0015s (0m 10s)  76% completed  (55% total)
+     Speed:     ev/sec=345386   simsec/sec=29.9857   ev/simsec=11518.3
+     Messages:  created: 5304113   present: 813   in FES: 307
+** Event #4372102   t=300   Elapsed: 11.5742s (0m 11s)  100% completed  (60% total)
+     Speed:     ev/sec=431429   simsec/sec=44.4791   ev/simsec=9699.58
+     Messages:  created: 6289712   present: 612   in FES: 187
+
+<!> Simulation time limit reached -- at t=300s, event #4372102
+[INFO]	Radio signal arrival computation count = 2269674
+[INFO]	Transmission count = 22926
+[INFO]	Radio frame send count = 2269674
+[INFO]	Reception computation count = 1634682
+[INFO]	Interference computation count = 4924628
+[INFO]	Reception decision computation count = 30
+[INFO]	Listening decision computation count = 3290732
+[INFO]	Reception cache hit = 75.6518 %
+[INFO]	Interference cache hit = 66.6667 %
+[INFO]	Noise cache hit = 0 %
+[INFO]	SNIR cache hit = 50 %
+[INFO]	Reception decision cache hit = 50 %
+[INFO]	Reception result cache hit = 0 %
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded

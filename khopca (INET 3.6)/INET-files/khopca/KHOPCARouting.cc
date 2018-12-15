@@ -90,17 +90,22 @@ void KHOPCARouting::initialize(int stage){
         MIN = par("MIN");
         w_n = par("w_n");
         updateInterval = par("updateInterval");
-        updateInterval += (uniform(1,100)/50);
+        updateInterval += (uniform(1,100)/100);
+        packetLossProbability = par("packetLossProbability");
         //destAddress = par("destAddress");
         power = uniform(1,100)/100;
 
         khopcaUDPPort = par("udpPort");
+        if(selfMsg != nullptr && selfMsg->isScheduled() && selfMsg->isSelfMessage()){
+            cancelAndDelete(selfMsg);
+        }
         selfMsg = new cMessage("sendTimer");
 
     }
     else if (stage == INITSTAGE_ROUTING_PROTOCOLS) {
         EV << "KHOPCA: Initializing Routing Protocol: " << stage << endl;
         NodeStatus *nodeStatus = dynamic_cast<NodeStatus *>(host->getSubmodule("status"));
+        isOperational = !nodeStatus || nodeStatus->getState() == NodeStatus::UP;
 
         addressType = getSelfIPAddress().getAddressType();
         address = this->getSelfIPAddress();
@@ -108,7 +113,9 @@ void KHOPCARouting::initialize(int stage){
         socket.registerProtocol(IP_PROT_MANET);
         host->subscribe(NF_LINK_BREAK, this);
 
-        scheduleAt(simTime() + updateInterval, selfMsg);
+        if(isOperational){
+            scheduleAt(simTime() + updateInterval, selfMsg);
+        }
     }
 }
 
@@ -262,6 +269,8 @@ void KHOPCARouting:: HandleKHOPCAWeight(KHOPCAWeight* kwPacket){
         EV << "Not Found" << endl;
         neighbors.push_back(node);
     }
+
+    delete kwPacket;
 
 }
 
@@ -428,32 +437,49 @@ std::string KHOPCARouting::CreateTreeString(){
 
 void KHOPCARouting::handleMessage(cMessage *msg) {
     EV << "KHOPCA: Handling Message" << endl;
+    if (!isOperational) {
+        //if (msg->isSelfMessage())
+          //  throw cRuntimeError("Model error: self msg '%s' received when isOperational is false", msg->getName());
+
+        EV_ERROR << "Application is turned off, dropping '" << msg->getName() << "' message\n";
+        delete msg;
+        return;
+    }
     if(msg->isSelfMessage()){
         if(msg == selfMsg){
             EV << "Handling Send Timer" << endl;
             KHOPCAWeight* kwPacket = CreateKHOPCAWeight(addressType->getBroadcastAddress());
             SendKHOPCAWeight(kwPacket, addressType->getBroadcastAddress());
-            scheduleAt(simTime() + updateInterval, selfMsg);
+            if(simTime() + updateInterval < SimTime::getMaxTime()){
+                scheduleAt(simTime() + updateInterval, selfMsg);
+            }
 
             ImplementRules();
-        }
-        else{
+
+        } else {
             throw cRuntimeError("Unknown Self Message");
         }
-    }
-    else if (ICMPMessage *icmpPacket = dynamic_cast<ICMPMessage *>(msg)) {
+    } else if (ICMPMessage *icmpPacket = dynamic_cast<ICMPMessage *>(msg)) {
             // ICMP packet arrived, dropped
             delete icmpPacket;
-    }
-    else{
+    } else {
+
         EV << "Handling KHOPCA Packet" << endl;
+        if(uniform(0,1) < packetLossProbability){
+
+            EV << "Packet Lost" << endl;
+            return;
+        } else if(msg == nullptr){
+            EV << "Message already deleted" << endl;
+            return;
+        }
         UDPPacket *udpPacket = check_and_cast<UDPPacket *>(msg);
         KHOPCAWeight *kwPacket = check_and_cast<KHOPCAWeight *>(udpPacket -> decapsulate());
 
         HandleKHOPCAWeight(kwPacket);
 
-        delete kwPacket;
         delete udpPacket;
+
     }
 }
 
@@ -478,29 +504,51 @@ bool KHOPCARouting::isUnconnectedNode() {
 int KHOPCARouting::getClusterSize(){
     return connected.size();
 }
-
-void KHOPCARouting::clearState(){
-    cancelEvent(selfMsg);
-}
 KHOPCARouting::KHOPCARouting() {
     // Temp
 }
-void KHOPCARouting::finish() {
 
+bool KHOPCARouting::handleOperationStage(LifecycleOperation *operation, int stage, IDoneCallback *doneCallback){
+    Enter_Method_Silent();
+        if (dynamic_cast<NodeStartOperation *>(operation)) {
+            if ((NodeStartOperation::Stage)stage == NodeStartOperation::STAGE_APPLICATION_LAYER) {
+                isOperational = true;;
+            }
+        }
+        else if (dynamic_cast<NodeShutdownOperation *>(operation)) {
+            if ((NodeShutdownOperation::Stage)stage == NodeShutdownOperation::STAGE_APPLICATION_LAYER) {
+                isOperational = false;
+                clearState();
+            }
+        }
+        else if (dynamic_cast<NodeCrashOperation *>(operation)) {
+            if ((NodeCrashOperation::Stage)stage == NodeCrashOperation::STAGE_CRASH) {
+                isOperational = false;
+                clearState();
+            }
+        }
+        else
+            throw cRuntimeError("Unsupported lifecycle operation '%s'", operation->getClassName());
+
+        return true;
+}
+
+void KHOPCARouting::clearState(){
+    if(selfMsg->isScheduled()){
+        cancelEvent(selfMsg);
+    }
+}
+
+KHOPCARouting::~KHOPCARouting(){
     // Print out duration as cluster head at close
-    if(w_n == MAX){
-        stats -> recordDurationHead(simTime().dbl() - headDur);
+    if(w_n == MAX && isOperational){
+        //stats -> recordDurationHead(simTime().dbl() - headDur);
     }
 
     EV << "Stats Recorded" << endl;
-    // Cancel and delete remaining messages
     clearState();
     delete selfMsg;
 
-}
-KHOPCARouting::~KHOPCARouting(){
-    clearState();
-    delete selfMsg;
 }
 
 

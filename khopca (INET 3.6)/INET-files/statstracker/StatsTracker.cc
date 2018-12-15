@@ -6,6 +6,8 @@
 
 #include "StatsTracker.h"
 #include "inet/routing/khopca/KHOPCARouting.h"
+#include "inet/common/lifecycle/NodeOperations.h"
+#include "inet/common/ModuleAccess.h"
 
 #include <fstream>
 #include <iostream>
@@ -46,6 +48,7 @@ void StatsTracker::initialize(int stage) {
 
     if (stage == INITSTAGE_LOCAL) {
 
+
         std::ofstream myfile;
         myfile.open("test.txt");
 
@@ -62,10 +65,15 @@ void StatsTracker::initialize(int stage) {
         }
         myfile.close();
         updateInterval = par("updateInterval");
+
+        if(selfMsg != nullptr){
+            cancelAndDelete(selfMsg);
+        }
         selfMsg = new cMessage("sendTimer");
 
-        scheduleAt(simTime() + updateInterval, selfMsg);
     } else if (stage == INITSTAGE_ROUTING_PROTOCOLS) {
+
+        scheduleAt(simTime() + updateInterval, selfMsg);
 
     }
 
@@ -79,6 +87,8 @@ void StatsTracker::handleMessage(cMessage *msg){
             getSimulationStats();
 
             scheduleAt(simTime() + updateInterval, selfMsg);
+
+
         } else {
             throw cRuntimeError("Unknown Self Message");
         }
@@ -118,8 +128,12 @@ void StatsTracker::getRateOfChangeHeads(){
 
 
 void StatsTracker::recordDurationHead(double dur){
-    clusterDuration.record(dur);
-    clusterDurationStats.collect(dur);
+    try {
+        clusterDuration.record(dur);
+        clusterDurationStats.collect(dur);
+    } catch(std::exception& e){
+        EV << "SORRY: " << e.what() << endl;
+    }
 }
 
 void StatsTracker::recordRoleChange(int rol){
@@ -137,8 +151,18 @@ void StatsTracker::recordDelay(double delay){
     nodeDelayStats.collect(delay);
 }
 
+
+void StatsTracker::clearState(){
+    /*if(selfMsg->isSelfMessage() && selfMsg->isScheduled()){
+        cancelEvent(selfMsg);
+    }*/
+    //cancelEvent(selfMsg);
+}
+
 StatsTracker::~StatsTracker(){
 
+    clearState();
+    delete selfMsg;
 }
 
 } // end namespace

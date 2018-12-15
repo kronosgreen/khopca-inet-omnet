@@ -1,0 +1,43 @@
+** Event #0   t=0   Elapsed: 6e-06s (0m 00s)  0% completed  (60% total)
+     Speed:     ev/sec=0   simsec/sec=0   ev/simsec=0
+     Messages:  created: 182   present: 182   in FES: 121
+** Event #253464   t=300   Elapsed: 0.564624s (0m 00s)  100% completed  (80% total)
+     Speed:     ev/sec=448912   simsec/sec=531.323   ev/simsec=844.894
+     Messages:  created: 272215   present: 128   in FES: 36
+
+<!> Simulation time limit reached -- at t=300s, event #253464
+[INFO]	Radio signal arrival computation count = 89528
+[INFO]	Transmission count = 4712
+[INFO]	Radio frame send count = 89528
+[INFO]	Reception computation count = 69179
+[INFO]	Interference computation count = 212230
+[INFO]	Reception decision computation count = 48
+[INFO]	Listening decision computation count = 143016
+[INFO]	Reception cache hit = 75.0574 %
+[INFO]	Interference cache hit = 66.6667 %
+[INFO]	Noise cache hit = 0 %
+[INFO]	SNIR cache hit = 50 %
+[INFO]	Reception decision cache hit = 50 %
+[INFO]	Reception result cache hit = 0 %
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[11].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[14].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded

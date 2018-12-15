@@ -1,0 +1,41 @@
+** Event #0   t=0   Elapsed: 7e-06s (0m 00s)  0% completed  (80% total)
+     Speed:     ev/sec=0   simsec/sec=0   ev/simsec=0
+     Messages:  created: 182   present: 182   in FES: 121
+** Event #198087   t=300   Elapsed: 0.43934s (0m 00s)  100% completed  (100% total)
+     Speed:     ev/sec=450880   simsec/sec=682.791   ev/simsec=660.349
+     Messages:  created: 198825   present: 122   in FES: 34
+
+<!> Simulation time limit reached -- at t=300s, event #198087
+[INFO]	Radio signal arrival computation count = 68666
+[INFO]	Transmission count = 3614
+[INFO]	Radio frame send count = 68666
+[INFO]	Reception computation count = 43161
+[INFO]	Interference computation count = 133086
+[INFO]	Reception decision computation count = 16
+[INFO]	Listening decision computation count = 89919
+[INFO]	Reception cache hit = 75.0481 %
+[INFO]	Interference cache hit = 66.6667 %
+[INFO]	Noise cache hit = 0 %
+[INFO]	SNIR cache hit = 50 %
+[INFO]	Reception decision cache hit = 50 %
+[INFO]	Reception result cache hit = 0 %
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded

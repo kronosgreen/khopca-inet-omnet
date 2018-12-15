@@ -1,0 +1,317 @@
+** Event #0   t=0   Elapsed: 1.2e-05s (0m 00s)  0% completed  (80% total)
+     Speed:     ev/sec=0   simsec/sec=0   ev/simsec=0
+     Messages:  created: 1802   present: 1802   in FES: 1201
+** Event #353280   t=4.381578809032   Elapsed: 2.0012s (0m 02s)  1% completed  (80% total)
+     Speed:     ev/sec=176536   simsec/sec=2.18949   ev/simsec=80628.7
+     Messages:  created: 516018   present: 1706   in FES: 789
+** Event #710912   t=8.471421791   Elapsed: 4.00258s (0m 04s)  2% completed  (80% total)
+     Speed:     ev/sec=178693   simsec/sec=2.04351   ev/simsec=87443.9
+     Messages:  created: 1039047   present: 1701   in FES: 784
+** Event #1051648   t=12.46873301868   Elapsed: 6.00373s (0m 06s)  4% completed  (80% total)
+     Speed:     ev/sec=170270   simsec/sec=1.9975   ev/simsec=85241.3
+     Messages:  created: 1537667   present: 1696   in FES: 773
+** Event #1365504   t=16.250839127077   Elapsed: 8.0042s (0m 08s)  5% completed  (81% total)
+     Speed:     ev/sec=156891   simsec/sec=1.8906   ev/simsec=82984.5
+     Messages:  created: 1997740   present: 1703   in FES: 739
+** Event #1782784   t=21.259502379566   Elapsed: 10.0045s (0m 10s)  7% completed  (81% total)
+     Speed:     ev/sec=208607   simsec/sec=2.50394   ev/simsec=83311.7
+     Messages:  created: 2609898   present: 1636   in FES: 713
+** Event #2210560   t=26.573650371952   Elapsed: 12.0055s (0m 12s)  8% completed  (81% total)
+     Speed:     ev/sec=213788   simsec/sec=2.65583   ev/simsec=80497.6
+     Messages:  created: 3237977   present: 1411   in FES: 639
+** Event #2664960   t=32.275652593069   Elapsed: 14.0076s (0m 14s)  10% completed  (82% total)
+     Speed:     ev/sec=226957   simsec/sec=2.84795   ev/simsec=79691.3
+     Messages:  created: 3906237   present: 1712   in FES: 755
+** Event #3098880   t=37.762314266057   Elapsed: 16.0083s (0m 16s)  12% completed  (82% total)
+     Speed:     ev/sec=216882   simsec/sec=2.74234   ev/simsec=79086.3
+     Messages:  created: 4544812   present: 1674   in FES: 758
+** Event #3633408   t=44.511507646691   Elapsed: 18.0083s (0m 18s)  14% completed  (82% total)
+     Speed:     ev/sec=267262   simsec/sec=3.37457   ev/simsec=79198.8
+     Messages:  created: 5332530   present: 1731   in FES: 732
+** Event #4166144   t=51.500821343835   Elapsed: 20.0084s (0m 20s)  17% completed  (83% total)
+     Speed:     ev/sec=266362   simsec/sec=3.49458   ev/simsec=76221.5
+     Messages:  created: 6118768   present: 1678   in FES: 705
+** Event #4731136   t=59.195919845427   Elapsed: 22.0093s (0m 22s)  19% completed  (83% total)
+     Speed:     ev/sec=282367   simsec/sec=3.84579   ev/simsec=73422.3
+     Messages:  created: 6955551   present: 2170   in FES: 908
+** Event #5177856   t=65.343439108085   Elapsed: 24.0096s (0m 24s)  21% completed  (84% total)
+     Speed:     ev/sec=223331   simsec/sec=3.07336   ev/simsec=72666.7
+     Messages:  created: 7617081   present: 1498   in FES: 635
+** Event #5738240   t=73.132391466284   Elapsed: 26.0105s (0m 26s)  24% completed  (84% total)
+     Speed:     ev/sec=280059   simsec/sec=3.89263   ev/simsec=71946
+     Messages:  created: 8447921   present: 1723   in FES: 716
+** Event #6200576   t=79.618805030665   Elapsed: 28.0117s (0m 28s)  26% completed  (85% total)
+     Speed:     ev/sec=231028   simsec/sec=3.24124   ev/simsec=71277.6
+     Messages:  created: 9133800   present: 1721   in FES: 710
+** Event #6514944   t=84.042909407485   Elapsed: 30.012s (0m 30s)  28% completed  (85% total)
+     Speed:     ev/sec=157164   simsec/sec=2.21176   ev/simsec=71058
+     Messages:  created: 9600622   present: 1637   in FES: 734
+** Event #6982400   t=90.832326081268   Elapsed: 32.0139s (0m 32s)  30% completed  (86% total)
+     Speed:     ev/sec=233505   simsec/sec=3.39147   ev/simsec=68850.7
+     Messages:  created: 10296026   present: 1683   in FES: 700
+** Event #7408128   t=97.251706643201   Elapsed: 34.0142s (0m 34s)  32% completed  (86% total)
+     Speed:     ev/sec=212828   simsec/sec=3.20915   ev/simsec=66319.2
+     Messages:  created: 10931625   present: 1663   in FES: 668
+** Event #7875584   t=104.83648014341   Elapsed: 36.0144s (0m 36s)  34% completed  (86% total)
+     Speed:     ev/sec=233709   simsec/sec=3.79207   ev/simsec=61630.8
+     Messages:  created: 11632807   present: 1631   in FES: 686
+** Event #8238336   t=110.816095321925   Elapsed: 38.3381s (0m 38s)  36% completed  (87% total)
+     Speed:     ev/sec=156112   simsec/sec=2.57335   ev/simsec=60664.8
+     Messages:  created: 12177465   present: 1519   in FES: 600
+** Event #8757248   t=119.690075922311   Elapsed: 40.3387s (0m 40s)  39% completed  (87% total)
+     Speed:     ev/sec=259374   simsec/sec=4.43559   ev/simsec=58475.7
+     Messages:  created: 12958559   present: 1602   in FES: 661
+** Event #9348608   t=130.280264610778   Elapsed: 42.3395s (0m 42s)  43% completed  (88% total)
+     Speed:     ev/sec=295560   simsec/sec=5.29294   ev/simsec=55840.4
+     Messages:  created: 13851269   present: 1545   in FES: 590
+** Event #9925632   t=141.070486584194   Elapsed: 44.3407s (0m 44s)  47% completed  (89% total)
+     Speed:     ev/sec=288346   simsec/sec=5.39201   ev/simsec=53476.6
+     Messages:  created: 14724735   present: 1614   in FES: 639
+** Event #10405632   t=150.326591441921   Elapsed: 46.3445s (0m 46s)  50% completed  (90% total)
+     Speed:     ev/sec=239535   simsec/sec=4.61908   ev/simsec=51857.7
+     Messages:  created: 15452697   present: 1425   in FES: 540
+** Event #10937088   t=160.809254638558   Elapsed: 48.3446s (0m 48s)  53% completed  (90% total)
+     Speed:     ev/sec=265724   simsec/sec=5.24126   ev/simsec=50698.6
+     Messages:  created: 16259855   present: 1601   in FES: 609
+** Event #11438592   t=170.926438227089   Elapsed: 50.3449s (0m 50s)  56% completed  (91% total)
+     Speed:     ev/sec=250707   simsec/sec=5.05769   ev/simsec=49569.5
+     Messages:  created: 17023161   present: 1601   in FES: 618
+** Event #11929344   t=181.53776151517   Elapsed: 52.3456s (0m 52s)  60% completed  (92% total)
+     Speed:     ev/sec=245288   simsec/sec=5.30375   ev/simsec=46248
+     Messages:  created: 17772671   present: 1587   in FES: 600
+** Event #12525312   t=195.029129729905   Elapsed: 54.3461s (0m 54s)  65% completed  (93% total)
+     Speed:     ev/sec=297913   simsec/sec=6.74408   ev/simsec=44174
+     Messages:  created: 18685805   present: 1592   in FES: 593
+** Event #13135360   t=209.865718837182   Elapsed: 56.3463s (0m 56s)  69% completed  (93% total)
+     Speed:     ev/sec=305003   simsec/sec=7.41778   ev/simsec=41117.8
+     Messages:  created: 19622773   present: 1413   in FES: 494
+** Event #13787648   t=226.716119670842   Elapsed: 58.3465s (0m 58s)  75% completed  (95% total)
+     Speed:     ev/sec=326107   simsec/sec=8.42425   ev/simsec=38710.5
+     Messages:  created: 20628100   present: 1752   in FES: 583
+** Event #14452736   t=245.756262316931   Elapsed: 60.3472s (1m 00s)  81% completed  (96% total)
+     Speed:     ev/sec=332430   simsec/sec=9.51682   ev/simsec=34930.8
+     Messages:  created: 21659354   present: 1604   in FES: 580
+** Event #15048448   t=264.168273070845   Elapsed: 62.3475s (1m 02s)  88% completed  (97% total)
+     Speed:     ev/sec=297809   simsec/sec=9.20454   ev/simsec=32354.5
+     Messages:  created: 22585792   present: 1476   in FES: 468
+** Event #15628544   t=283.973288555807   Elapsed: 64.3477s (1m 04s)  94% completed  (98% total)
+     Speed:     ev/sec=290015   simsec/sec=9.90138   ev/simsec=29290.4
+     Messages:  created: 23490772   present: 1445   in FES: 443
+** Event #16019265   t=300   Elapsed: 65.538s (1m 05s)  100% completed  (100% total)
+     Speed:     ev/sec=328260   simsec/sec=13.4645   ev/simsec=24379.7
+     Messages:  created: 24099762   present: 1217   in FES: 341
+
+<!> Simulation time limit reached -- at t=300s, event #16019265
+[INFO]	Radio signal arrival computation count = 8631028
+[INFO]	Transmission count = 43372
+[INFO]	Radio frame send count = 8631028
+[INFO]	Reception computation count = 6242474
+[INFO]	Interference computation count = 18761864
+[INFO]	Reception decision computation count = 75314
+[INFO]	Listening decision computation count = 12445441
+[INFO]	Reception cache hit = 75.8135 %
+[INFO]	Interference cache hit = 66.6667 %
+[INFO]	Noise cache hit = 0 %
+[INFO]	SNIR cache hit = 50 %
+[INFO]	Reception decision cache hit = 50 %
+[INFO]	Reception result cache hit = 0 %
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded

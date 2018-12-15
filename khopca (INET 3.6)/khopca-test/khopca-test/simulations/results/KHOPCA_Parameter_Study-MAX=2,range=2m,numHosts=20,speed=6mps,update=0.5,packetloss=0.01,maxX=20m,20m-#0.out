@@ -1,0 +1,47 @@
+** Event #0   t=0   Elapsed: 6e-06s (0m 00s)  0% completed  (40% total)
+     Speed:     ev/sec=0   simsec/sec=0   ev/simsec=0
+     Messages:  created: 182   present: 182   in FES: 121
+** Event #219511   t=300   Elapsed: 0.511478s (0m 00s)  100% completed  (60% total)
+     Speed:     ev/sec=429183   simsec/sec=586.549   ev/simsec=731.707
+     Messages:  created: 223146   present: 140   in FES: 36
+
+<!> Simulation time limit reached -- at t=300s, event #219511
+[INFO]	Radio signal arrival computation count = 73416
+[INFO]	Transmission count = 3864
+[INFO]	Radio frame send count = 73416
+[INFO]	Reception computation count = 54083
+[INFO]	Interference computation count = 166038
+[INFO]	Reception decision computation count = 547
+[INFO]	Listening decision computation count = 111436
+[INFO]	Reception cache hit = 75.3182 %
+[INFO]	Interference cache hit = 66.6667 %
+[INFO]	Noise cache hit = 0 %
+[INFO]	SNIR cache hit = 50 %
+[INFO]	Reception decision cache hit = 50 %
+[INFO]	Reception result cache hit = 0 %
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[5].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[5].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[8].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[8].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[9].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[18].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded

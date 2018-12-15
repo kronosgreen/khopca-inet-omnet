@@ -1,0 +1,284 @@
+** Event #0   t=0   Elapsed: 7e-06s (0m 00s)  0% completed  (60% total)
+     Speed:     ev/sec=0   simsec/sec=0   ev/simsec=0
+     Messages:  created: 902   present: 902   in FES: 601
+** Event #716288   t=31.196231786754   Elapsed: 2.00039s (0m 02s)  10% completed  (62% total)
+     Speed:     ev/sec=358076   simsec/sec=15.5951   ev/simsec=22960.8
+     Messages:  created: 1009518   present: 918   in FES: 368
+** Event #1411328   t=62.785785861305   Elapsed: 4.00084s (0m 04s)  20% completed  (64% total)
+     Speed:     ev/sec=347442   simsec/sec=15.7912   ev/simsec=22002.2
+     Messages:  created: 1991194   present: 1002   in FES: 352
+** Event #2082304   t=96.54529059826   Elapsed: 6.00131s (0m 06s)  32% completed  (66% total)
+     Speed:     ev/sec=335409   simsec/sec=16.8758   ev/simsec=19875.2
+     Messages:  created: 2944111   present: 1107   in FES: 350
+** Event #2834688   t=143.929480638562   Elapsed: 8.00188s (0m 08s)  47% completed  (69% total)
+     Speed:     ev/sec=376084   simsec/sec=23.6853   ev/simsec=15878.4
+     Messages:  created: 4020161   present: 1123   in FES: 303
+** Event #3517184   t=196.164093909799   Elapsed: 10.002s (0m 10s)  65% completed  (73% total)
+     Speed:     ev/sec=341234   simsec/sec=26.1163   ev/simsec=13066
+     Messages:  created: 5002476   present: 1038   in FES: 243
+** Event #4322048   t=276.695617186363   Elapsed: 12.0021s (0m 12s)  92% completed  (78% total)
+     Speed:     ev/sec=402412   simsec/sec=40.2638   ev/simsec=9994.4
+     Messages:  created: 6160736   present: 1148   in FES: 225
+** Event #4500166   t=300   Elapsed: 12.4157s (0m 12s)  100% completed  (80% total)
+     Speed:     ev/sec=430618   simsec/sec=56.3387   ev/simsec=7643.38
+     Messages:  created: 6414979   present: 1037   in FES: 174
+
+<!> Simulation time limit reached -- at t=300s, event #4500166
+[INFO]	Radio signal arrival computation count = 2266308
+[INFO]	Transmission count = 22892
+[INFO]	Radio frame send count = 2266308
+[INFO]	Reception computation count = 1693161
+[INFO]	Interference computation count = 5100633
+[INFO]	Reception decision computation count = 14797
+[INFO]	Listening decision computation count = 3393106
+[INFO]	Reception cache hit = 75.5161 %
+[INFO]	Interference cache hit = 66.6667 %
+[INFO]	Noise cache hit = 0 %
+[INFO]	SNIR cache hit = 50 %
+[INFO]	Reception decision cache hit = 50 %
+[INFO]	Reception result cache hit = 0 %
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[1].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[2].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[2].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[2].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[3].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[3].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[4].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[4].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[6].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[6].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[7].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[7].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[7].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[7].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[9].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[9].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[10].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[10].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[11].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[11].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[11].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[11].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[11].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[11].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[12].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[13].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[14].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[14].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[15].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[15].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[16].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[18].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[18].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[19].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[19].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[19].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[20].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[20].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[21].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[21].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[22].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[24].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[25].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[27].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[29].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[29].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[31].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[32].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[33].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[33].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[34].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[37].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[37].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[37].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[40].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[41].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[44].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[44].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[46].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[46].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[46].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[46].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[49].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[50].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[50].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[50].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[50].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[51].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[53].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[54].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[54].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[55].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[55].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[55].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[55].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[56].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[56].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[56].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[57].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[57].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[57].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[58].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[58].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[58].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[59].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[59].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[61].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[61].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[61].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[62].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[62].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[62].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[62].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[63].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[64].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[64].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[64].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[65].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[65].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[67].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[68].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[68].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[69].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[69].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[69].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[69].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[71].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[71].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[71].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[71].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[74].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[74].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[74].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[76].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[76].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[79].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[80].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[81].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[82].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[83].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[83].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[83].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[84].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[85].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[86].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[87].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[88].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[88].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[89].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[91].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[91].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[92].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[92].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[92].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[94].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[94].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[94].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[94].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[95].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[97].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[97].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[97].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[97].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[97].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[98].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded

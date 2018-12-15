@@ -1,0 +1,149 @@
+** Event #0   t=0   Elapsed: 1.7e-05s (0m 00s)  0% completed  (0% total)
+     Speed:     ev/sec=0   simsec/sec=0   ev/simsec=0
+     Messages:  created: 902   present: 902   in FES: 601
+** Event #753664   t=34.754733636153   Elapsed: 2.0005s (0m 02s)  11% completed  (2% total)
+     Speed:     ev/sec=376740   simsec/sec=17.3731   ev/simsec=21685.2
+     Messages:  created: 1067222   present: 841   in FES: 376
+** Event #1499392   t=71.984185387546   Elapsed: 4.00109s (0m 04s)  23% completed  (4% total)
+     Speed:     ev/sec=372754   simsec/sec=18.6092   ev/simsec=20030.6
+     Messages:  created: 2129750   present: 738   in FES: 313
+** Event #2271488   t=116.966333635812   Elapsed: 6.00141s (0m 06s)  38% completed  (7% total)
+     Speed:     ev/sec=385987   simsec/sec=22.4875   ev/simsec=17164.5
+     Messages:  created: 3238431   present: 855   in FES: 327
+** Event #2890496   t=158.868381967406   Elapsed: 8.00164s (0m 08s)  52% completed  (10% total)
+     Speed:     ev/sec=309468   simsec/sec=20.9486   ev/simsec=14772.7
+     Messages:  created: 4133046   present: 780   in FES: 281
+** Event #3526912   t=211.166199556801   Elapsed: 10.0017s (0m 10s)  70% completed  (14% total)
+     Speed:     ev/sec=318194   simsec/sec=26.1477   ev/simsec=12169.1
+     Messages:  created: 5057776   present: 920   in FES: 303
+** Event #4337920   t=298.823491606442   Elapsed: 12.0021s (0m 12s)  99% completed  (19% total)
+     Speed:     ev/sec=405433   simsec/sec=43.821   ev/simsec=9252.03
+     Messages:  created: 6234072   present: 637   in FES: 183
+** Event #4346124   t=300   Elapsed: 12.0197s (0m 12s)  100% completed  (20% total)
+     Speed:     ev/sec=466133   simsec/sec=66.8547   ev/simsec=6972.33
+     Messages:  created: 6245736   present: 632   in FES: 182
+
+<!> Simulation time limit reached -- at t=300s, event #4346124
+[INFO]	Radio signal arrival computation count = 2248686
+[INFO]	Transmission count = 22714
+[INFO]	Radio frame send count = 2248686
+[INFO]	Reception computation count = 1633767
+[INFO]	Interference computation count = 4923002
+[INFO]	Reception decision computation count = 27
+[INFO]	Listening decision computation count = 3289576
+[INFO]	Reception cache hit = 75.3115 %
+[INFO]	Interference cache hit = 66.6667 %
+[INFO]	Noise cache hit = 0 %
+[INFO]	SNIR cache hit = 50 %
+[INFO]	Reception decision cache hit = 50 %
+[INFO]	Reception result cache hit = 0 %
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[3].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[14].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[17].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[22].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[35].khopca.KHOPCAWeight -- check module destructor
+undisposed object: (inet::UDPPacket) SensorNetwork.host[35].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[43].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[58].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[65].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+undisposed object: (inet::UDPPacket) SensorNetwork.host[76].khopca.KHOPCAWeight -- check module destructor
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded
+[INFO]	Stats Recorded

@@ -27,7 +27,7 @@ namespace inet {
 
     class StatsTracker;
 
-    class KHOPCARouting : public cSimpleModule, public cListener {// , public INetfilter::IHook
+    class KHOPCARouting : public cSimpleModule, public cListener, public ILifecycle {// , public INetfilter::IHook
 
         protected:
 
@@ -68,8 +68,11 @@ namespace inet {
             int MIN;
             int w_n;
             double updateInterval;
+            double packetLossProbability;
             double power;
             //const char* destAddress;
+
+            bool isOperational = false;
 
             //Creates and sends weight/address info
             KHOPCAWeight *CreateKHOPCAWeight(const L3Address& destAddr);
@@ -102,7 +105,7 @@ namespace inet {
 
             // End functions
             void clearState();
-            virtual void finish() override;
+            virtual bool handleOperationStage(LifecycleOperation *operation, int stage, IDoneCallback *doneCallback) override;
 
         public:
             KHOPCARouting();

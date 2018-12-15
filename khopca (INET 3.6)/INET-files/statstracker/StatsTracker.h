@@ -45,11 +45,14 @@ class StatsTracker : public cSimpleModule {
         cStdDev nodeDelayStats;
         cStdDev ratioUnconnectedStats;
 
+
         void initialize(int stage) override;
         void handleMessage(cMessage *msg) override;
 
         void getSimulationStats();
         void getRateOfChangeHeads();
+
+        void clearState();
 
     public:
 
