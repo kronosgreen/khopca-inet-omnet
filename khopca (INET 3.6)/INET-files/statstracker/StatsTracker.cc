@@ -153,9 +153,9 @@ void StatsTracker::recordDelay(double delay){
 
 
 void StatsTracker::clearState(){
-    /*if(selfMsg->isSelfMessage() && selfMsg->isScheduled()){
+    if(selfMsg->isScheduled()){
         cancelEvent(selfMsg);
-    }*/
+    }
     //cancelEvent(selfMsg);
 }
 

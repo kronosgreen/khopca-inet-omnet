@@ -47,6 +47,7 @@ class StatsTracker : public cSimpleModule {
 
 
         void initialize(int stage) override;
+        virtual int numInitStages() const override { return NUM_INIT_STAGES; }
         void handleMessage(cMessage *msg) override;
 
         void getSimulationStats();

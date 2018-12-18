@@ -490,11 +490,11 @@ L3Address KHOPCARouting:: getSelfIPAddress() const{
 
 // returns True if node is cluster head or independent
 bool KHOPCARouting::isCluster() {
-    return w_n == 5 || neighbors.size() == 0;
+    return w_n == MAX || neighbors.size() == 0;
 }
 
 bool KHOPCARouting::isClusterHead() {
-    return w_n == 5;
+    return w_n == MAX;
 }
 
 bool KHOPCARouting::isUnconnectedNode() {
