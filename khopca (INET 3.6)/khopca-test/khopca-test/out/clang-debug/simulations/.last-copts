@@ -1,1 +1,0 @@
--g -Wall -MMD -MP -MF .d  -fPIC  -Wno-deprecated-register -Wno-unused-function -fno-stack-protector -DHAVE_SWAPCONTEXT -DWITH_MPI -DXMLPARSER=libxml -DPREFER_QTENV -DWITH_QTENV -DWITH_PARSIM -DWITH_NETBUILDER -DWITH_OSG -DWITH_OSGEARTH  -DINET_IMPORT -I. -I/home/veins/src/inet/src -I/home/veins/src/omnetpp-5.3/include

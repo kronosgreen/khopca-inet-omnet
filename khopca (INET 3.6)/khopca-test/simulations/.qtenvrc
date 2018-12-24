@@ -1,45 +1,13 @@
 [General]
-last-configname=KHOPCA_Network_Random
+last-configname=KHOPCA_Parameter_Study
 last-runnumber=0
-
-[Inspector-0]
-classname=omnetpp::cOutVector
-fullscreen=false
-geom=@Rect(838 228 400 300)
-id=@Variant(\0\0\0\x81\xff\xff\xff\xff\xff\xff\xff\xff)
-object=SensorNetwork.stats.Ratio of Unconnected Nodes
-type=2
-
-[Inspector-1]
-classname=omnetpp::cOutVector
-fullscreen=false
-geom=@Rect(421 230 400 300)
-id=@Variant(\0\0\0\x81\xff\xff\xff\xff\xff\xff\xff\xff)
-object=SensorNetwork.stats.Cluster Size
-type=2
-
-[Inspector-2]
-classname=omnetpp::cOutVector
-fullscreen=false
-geom=@Rect(423 571 400 300)
-id=@Variant(\0\0\0\x81\xff\xff\xff\xff\xff\xff\xff\xff)
-object=SensorNetwork.stats.Cluster Duration
-type=2
-
-[Inspector-3]
-classname=omnetpp::cOutVector
-fullscreen=false
-geom=@Rect(838 570 400 300)
-id=@Variant(\0\0\0\x81\xff\xff\xff\xff\xff\xff\xff\xff)
-object=SensorNetwork.stats.Role Changes
-type=2
 
 [RunModeProfiles]
 fast-max-animation-speed=nan
 fast-max-playback-speed=1e+6
 fast-min-animation-speed=nan
 fast-min-playback-speed=1
-fast-playback-speed=1000
+fast-playback-speed=1e+6
 run-max-animation-speed=nan
 run-max-playback-speed=100
 run-min-animation-speed=nan
