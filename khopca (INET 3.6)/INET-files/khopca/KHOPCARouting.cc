@@ -310,7 +310,7 @@ void KHOPCARouting:: ImplementRules(){
     // Check if node has become clusterhead or has lost clusterhead position
     if (old_w_n != MAX && w_n == MAX){
         headDur = simTime().dbl();
-    } else if (old_w_n == MAX && w_n != MAX) {
+    } else if ((old_w_n == MAX && w_n != MAX) || (simTime() + updateInterval > std::atof(cSimulation::getActiveEnvir()->getConfig()->getConfigValue("sim-time-limit")))) {
         stats -> recordDurationHead(simTime().dbl() - headDur);
         headDur = 0;
     }
